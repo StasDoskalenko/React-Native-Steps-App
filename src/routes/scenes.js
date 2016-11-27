@@ -1,5 +1,7 @@
 'use strict';
-import React, {StyleSheet} from 'react-native';
+
+import React from 'react';
+import {StyleSheet} from 'react-native';
 import {Scene, Actions} from 'react-native-router-flux';
 
 import TabIcon from '../components/tabIcon';

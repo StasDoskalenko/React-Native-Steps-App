@@ -1,6 +1,7 @@
 'use strict';
 
-import React, {Component, View, Text, StyleSheet} from 'react-native';
+import React, {Component} from 'react';
+import {View, Text, StyleSheet} from 'react-native';
 var Icon = require('react-native-vector-icons/Ionicons');
 import Colors from '../utils/colors';
 

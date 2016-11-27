@@ -1,7 +1,8 @@
 'use strict';
 
 import React, {
-    Component,
+    Component } from 'react';
+import {
     StyleSheet,
     View
 } from 'react-native';
