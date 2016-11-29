@@ -122,23 +122,6 @@ public class GoogleFitManager implements
 
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        Log.i(TAG, "onActivityResult" + requestCode);
-        if (requestCode == REQUEST_OAUTH) {
-            authInProgress = false;
-            if (resultCode == Activity.RESULT_OK) {
-                if (!mApiClient.isConnecting() && !mApiClient.isConnected()) {
-                    mApiClient.connect();
-                }
-            } else if (resultCode == Activity.RESULT_CANCELED) {
-                Log.e(TAG, "RESULT_CANCELED");
-            }
-        } else {
-            Log.e(TAG, "requestCode NOT request_oauth");
-        }
-
-    }
 
 
     protected void stop() {
@@ -162,4 +145,28 @@ public class GoogleFitManager implements
                 .emit(eventName, params);
     }
 
+
+    @Override
+    public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
+        Log.i(TAG, "onActivityResult" + requestCode);
+        if (requestCode == REQUEST_OAUTH) {
+            authInProgress = false;
+            if (resultCode == Activity.RESULT_OK) {
+                if (!mApiClient.isConnecting() && !mApiClient.isConnected()) {
+                    mApiClient.connect();
+                }
+            } else if (resultCode == Activity.RESULT_CANCELED) {
+                Log.e(TAG, "RESULT_CANCELED ale co tam");
+                mApiClient.connect();
+            }
+        } else {
+            Log.e(TAG, "requestCode NOT request_oauth");
+        }
+
+    }
+
+    @Override
+    public void onNewIntent(Intent intent) {
+
+    }
 }

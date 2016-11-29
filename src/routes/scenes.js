@@ -51,7 +51,7 @@ const scenes = Actions.create(
         <Scene key='app' title='App' component={main} initial={true}/>
         <Scene key='tabbar' tabs={true} default='stepTab' initial={false}
                tabBarStyle={styles.tabbar} type='replace'>
-            <Scene key='stepTab' title='Steps' icon={TabIcon} iconName='stats-bars'
+            <Scene key='stepTab' title='Steps' icon={TabIcon} iconName='md-stats'
                    navigationBarStyle={styles.navbar} titleStyle={styles.navbarTitle}>
                 <Scene key='Steps' title='Pedometer' component={step}/>
             </Scene>

@@ -82,7 +82,7 @@ class DailySteps extends Component {
                 {
                     (fill) => (
                         <View style={styles.dayFill}>
-                            <Icon name='android-walk' size={dayDim.iconSize} color='#29b8e5'/>
+                        
                             <Text style={styles.steps}>
                                 { this.props.steps } Steps
                             </Text>
