@@ -35,11 +35,14 @@ export function authorize() {
     } else if (Platform.OS === 'android') {
         return (dispatch) => {
             FitService.onAuthorize((result) => {
+                console.log(result);
                 dispatch(authSuccess(result));
                 Actions.tabbar();
             });
+            console.log('wtf');
+            //Actions.tabbar();
 
-            FitService.authorize();
+            // FitService.authorize();
         }
     }
 

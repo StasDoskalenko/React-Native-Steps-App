@@ -28,7 +28,7 @@ class Main extends Component {
     render() {
         return (
             <LinearGradient colors={['#237A82', '#366185', '#5D467A']}
-                            start={[0.0, 0.5]} end={[1.0, 0.5]} locations={[0.0, 1.0]}
+                            start={[0.0, 0.5]} end={[1.0, 0.5]} locations={[0.0, 0.5, 1.0]}
                             style={styles.gradient}>
                 <View style={styles.container}>
                     <Text style={styles.text}>
