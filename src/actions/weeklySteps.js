@@ -41,7 +41,7 @@ export function observeSteps() {
         }
     } else if (Platform.OS === 'android') {
         return (dispatch) =>{
-            FitService.observeSteps((result) => {
+            FitService.observeSteps((results) => {
                 dispatch(receiveTodaysSteps(TimeUtil.getToday(), results.steps));
             });
         }

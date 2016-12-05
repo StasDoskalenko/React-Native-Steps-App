@@ -97,7 +97,6 @@ class DailySteps extends Component {
     }
 
     render() {
-        //console.info(this.props);
         if (this.props.isSummary) {
             return (<View style={styles.container}>
                     {this.renderDay()}

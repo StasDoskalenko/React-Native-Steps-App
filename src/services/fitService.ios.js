@@ -23,7 +23,7 @@ class HealthKit {
     }
 
     observeSteps(callback) {
-         this.subscription = NativeAppEventEmitter.addListener(
+        this.subscription = NativeAppEventEmitter.addListener(
             'StepChangedEvent',
              (steps) => callback(steps)
         );

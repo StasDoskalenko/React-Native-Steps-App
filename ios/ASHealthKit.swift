@@ -176,7 +176,7 @@ class RNHealthKit: NSObject {
         self.recentSteps(startDate, endDate: endDate) { steps, error in
           //NSLog("Observed steps changed");
           
-          //self.bridge.eventDispatcher().sendAppEventWithName("StepChangedEvent", body: steps)
+          self.bridge.eventDispatcher().sendAppEvent(withName: "StepChangedEvent", body: steps)
         }
       }
       

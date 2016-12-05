@@ -29,6 +29,7 @@ class StepContainer extends Component {
     }
 
     componentWillUnmount() {
+        this.props.onDailySteps();
         this.props.onUnobserveSteps();
     }
 

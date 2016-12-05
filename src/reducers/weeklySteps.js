@@ -16,12 +16,12 @@ const initialWeeklySteps = {
 
 function getWeeklySteps(state, action) {
     const weekly = action.weekly;
-    console.log(weekly);
+    //console.log(weekly);
 
     return state.days.map((day, index) => {
         const weekDay = weekly[day.name];
 
-        console.log(weekly[day.name]);
+        //console.log(weekly[day.name]);
 
         if (!weekDay) {
             return {...day};
