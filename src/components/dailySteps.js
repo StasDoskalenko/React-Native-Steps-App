@@ -70,6 +70,7 @@ class DailySteps extends Component {
 
 
     renderDay() {
+        console.log(this.props);
         return (
             <AnimatedCircularProgress
                 size={dayDim.size}
