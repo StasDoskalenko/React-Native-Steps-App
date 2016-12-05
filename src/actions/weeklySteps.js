@@ -42,7 +42,7 @@ export function observeSteps() {
     } else if (Platform.OS === 'android') {
         return (dispatch) =>{
             FitService.observeSteps((result) => {
-                dispatch(receiveTodaysSteps(TimeUtil.getToday(), result.steps));
+                dispatch(receiveTodaysSteps(TimeUtil.getToday(), results.steps));
             });
         }
     }
@@ -53,6 +53,22 @@ export function unobserveSteps() {
     return (dispatch) => {
         FitService.usubscribeListeners();
     }
+}
+
+export function retrieveDailySteps() {
+    var todayStart = TimeUtil.getStartOfToday();
+    if (Platform.OS === 'ios') {
+        return (dispatch) => {
+            FitService.getSteps(todayStart, (err, results) => {
+                if (err) {
+                    // console.error(err)
+                } else {
+                    dispatch(receiveTodaysSteps(TimeUtil.getToday(), results));
+                }
+            });
+        }
+    }
+    //TODO implement android method
 }
 
 
@@ -69,10 +85,12 @@ export function retrieveWeeklySteps() {
                 if (err) {
                     // console.error(err)
                 } else {
-                    //console.log(result);
+                    //console.log(results);
                     //this.setState({today: result});
                     if(results.length > 0) {
                         dispatch(receiveWeeklySteps(results));
+                        dispatch(receiveTodaysSteps(todayStart, 1488));
+
                     }
                 }
             });

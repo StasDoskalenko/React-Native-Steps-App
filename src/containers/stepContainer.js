@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import WeeklySteps from '../components/weeklySteps';
 import DailySteps from '../components/dailySteps';
-import {observeSteps, unobserveSteps, retrieveWeeklySteps, selectDay} from '../actions';
+import {observeSteps, unobserveSteps, retrieveWeeklySteps, retrieveDailySteps, selectDay} from '../actions';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import Colors from '../utils/colors';
@@ -23,6 +23,7 @@ class StepContainer extends Component {
     }
 
     componentDidMount() {
+        this.props.onDailySteps();
         this.props.onWeeklySteps();
         this.props.onObserveSteps();
     }
@@ -105,6 +106,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({
+        onDailySteps: retrieveDailySteps,
         onWeeklySteps: retrieveWeeklySteps,
         onObserveSteps: observeSteps,
         onUnobserveSteps: unobserveSteps,

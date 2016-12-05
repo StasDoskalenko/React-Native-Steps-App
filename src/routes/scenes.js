@@ -56,7 +56,7 @@ const scenes = Actions.create(
                 <Scene key='Steps' title='Pedometer' component={step}/>
             </Scene>
             <Scene key='settingsTab' title='Settings' icon={TabIcon}
-                   navigationBarStyle={styles.navbar} titleStyle={styles.navbarTitle} iconName='ios-gear-outline'>
+                   navigationBarStyle={styles.navbar} titleStyle={styles.navbarTitle} iconName='ios-cog-outline'>
                 <Scene key='settings' title='Settings' component={settings}/>
                 <Scene key='goal' title='Daily Goal' component={goal}/>
                 <Scene key='terms' title='Terms And Conditions' component={policy}/>
