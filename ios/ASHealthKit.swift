@@ -8,6 +8,7 @@
 
 import Foundation
 import HealthKit
+
 // FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
 // Consider refactoring the code to use the non-optional operators.
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
@@ -31,8 +32,17 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
     return rhs < lhs
   }
 }
-
-
+/*
+ Custom event class to prevent deprecated errors
+ 
+class MyEventEmitter: RCTEventEmitter {
+  
+  
+  override func supportedEvents() -> [String]! {
+    return ["UploadProgress"]
+  }
+  
+}*/
 
 @objc(RNHealthKit)
 class RNHealthKit: NSObject {

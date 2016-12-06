@@ -31,7 +31,7 @@
    * on the same Wi-Fi network.
    */
   //jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios&dev=true"];
-  jsCodeLocation = [NSURL URLWithString:@"http://192.168.0.50:8081/index.ios.bundle?platform=ios&dev=true"];
+  //jsCodeLocation = [NSURL URLWithString:@"http://192.168.0.50:8081/index.ios.bundle?platform=ios&dev=true"];
 
 //jsCodeLocation = [NSURL URLWithString:@"http://172.16.0.92:8081/index.ios.bundle?platform=ios&dev=true"];
 
@@ -43,7 +43,7 @@
    * simulator in the "Release" build configuration.
    */
 
-   //jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+   jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"AwesimSteps"

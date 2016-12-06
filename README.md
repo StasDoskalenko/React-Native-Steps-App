@@ -1,10 +1,32 @@
-# AwesimSteps
+# React Native Steps App
 
 
 React Native step counter for iOS and Android. 
 
 * iOS uses the HealthKit API.
 * Android uses the Google Fit API.
+
+# Build
+
+* Install both watchman and node using Brew
+    - brew install node
+    - brew install watchman 
+* Install React Native CLI 
+    ```bash
+    npm install -g react-native-cli
+    ```
+* Clone and run project packager.
+    ```bash
+    git clone https://github.com/StasDoskalenko/React-Native-Steps-App.git react-native-steps-app
+    cd react-native-steps-app
+    npm start
+    ```
+* Open another terminal window (don't close packager terminal). And run project at device
+    (Xcode >= 8 required)
+    ```bash
+    react-native run-ios --configuration Release
+    ```
+* In some cases try to build directly via Xcode
 
 ##  Built with :
 
@@ -18,3 +40,6 @@ React Native step counter for iOS and Android.
 
 
 <img src="./images/ios-app-screenshot.png" width=400>
+
+## Licence
+Based on Asim Malik AwesimSteps app
