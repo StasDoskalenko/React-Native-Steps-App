@@ -12,6 +12,7 @@ React Native step counter for iOS and Android.
     - brew install node
     - brew install watchman 
 * Install React Native CLI 
+
     ```
     npm install -g react-native-cli
     ```
@@ -19,16 +20,23 @@ React Native step counter for iOS and Android.
     ```
     git clone https://github.com/StasDoskalenko/React-Native-Steps-App.git react-native-steps-app
     ```
+    
     ```
     cd react-native-steps-app
     ```
+    
     ```
     npm start
     ```
 * Open another terminal window (don't close packager terminal). And run project at device
-    (Xcode >= 8 required)
+    (Xcode >= 8 required).
+    
+    Building an app for testing at the device requires using the Release scheme in Xcode.
+    
+    Product → Scheme → Edit Scheme (cmd + <), make sure you're in the Run tab from the side, and set the Build Configuration dropdown to Release
+    
     ```
-    react-native run-ios --configuration Release
+    react-native run-ios
     ```
 * In some cases try to build directly via Xcode
 
